@@ -36,7 +36,7 @@ class Player(GameSprite):
 
 player1 = Player("ракетка.png", 50, 0, 50, 200, 10)
 player2 = Player("ракетка.png", 800, 0, 50, 200, 10)
-ball = GameSprite
+ball = GameSprite('ball.png', 200, 200, 60, 60, 60)
 
 clock = time.Clock()
 FPS = 60
@@ -51,5 +51,7 @@ while game:
     player1.update_l()
     player2.reset()
     player2.update_p()
+    ball.reset()
+    ball.update()
     display.update()
     clock.tick(FPS)
